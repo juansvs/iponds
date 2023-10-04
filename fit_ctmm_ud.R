@@ -42,6 +42,8 @@ clusterExport(cl = cl, c("telemetries", "GUESS", "SP", "parctmm", "parakde"))
 # Run in parallel
 CTMMs <- clusterApplyLB(cl = cl, seq_along(telemetries), parctmm)
 saveRDS(CTMMs, "w1_day_FITS.rds")
+
+clusterExport(cl = cl, "CTMMs")
 UD <- clusterApplyLB(cl = cl, seq_along(telemetries), parakde)
 saveRDS(UD, "w1_day_UDS.rds")
 # create CTMM objects in parallel

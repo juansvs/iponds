@@ -1,0 +1,24 @@
+Domingo 2023-11-05 10:30 am
+Habia dejado corriendo codigos para:
+- FIT RSF de semana 3 con plantas y depredaor
+- RSF semana 1 (solo plantas)
+- RSF semana 3 (solo depredador)
+- CTMMs y UDs de semana 1, 2, y 3, de noche
+El codigo de semana 1 fallo por un parentesis. Lo corregi y volvi a mandar hoy.
+El codigo de semana 3 con ambas variables fallo xq dice que hay NAs en el raster
+de plantas. Creo que esto es porque el UD es mas grande que el raster de plantas
+(el raster del depredador tambien es grande entonces tal vez no tiene el mismo
+problema). Para corregir esto habria que volver a generar los UDs, especificando
+que el extent es el mismo que el del poligono. 
+El codigo de CTMMs y UDs de semana 1 habia terminado, pero los UDs fueron 
+generados sin esas especificaciones. Lo corregi y volvi a mandar para que rehaga
+los UDs unicamente.
+Los codigos de semana 2 y 3 todavia estaban corriendo, ya se habian generado 
+todos menos uno de los FITS de sem. 2, y 27 de sem. 3, y ningun UD. 
+El plan es dejar eso corriendo, y luego aparte generar los UDs con las 
+especificaciones.
+Para el RSF, la idea seria volver a correrlo con los nuevos UDs. Probe y no
+se puede cambiar el extent de los UDs (clase UD de ctmm) a posteriori.
+11:30
+Cambie parametros en codigo create_UDs para generar los UDs de dias, semanas 1 
+a 3. Se van a guardar en un folder aparte llamado UDs_daytime_1105.
